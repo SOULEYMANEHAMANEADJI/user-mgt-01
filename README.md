@@ -1,27 +1,58 @@
-# UserApp01
+# **User Management Application 01**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
+## **Description**
+Cette application Angular permet de gérer les utilisateurs au sein d'une organisation. Elle permet d'ajouter, modifier, supprimer, et filtrer les utilisateurs selon différents critères (nom, département, genre, etc.). Les fonctionnalités incluent la pagination, la gestion des doublons, et l'affichage dynamique des utilisateurs en fonction de leurs salaires et statuts.
 
-## Development server
+## **Fonctionnalités principales**
+- **Affichage des utilisateurs** : Liste paginée des utilisateurs avec la possibilité de filtrer par nom, département, salaire, genre, et statut.
+- **Ajout d'utilisateur** : Formulaire pour ajouter un nouvel utilisateur, avec génération d'un identifiant unique et validation des doublons.
+- **Modification des utilisateurs** : Possibilité de mettre à jour les informations d'un utilisateur existant.
+- **Suppression d'utilisateur** : Suppression individuelle ou en masse des utilisateurs.
+- **Calculs dynamiques** :
+  - **Total des salaires** des utilisateurs actifs.
+  - **Nombre total d'utilisateurs**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## **Technologies utilisées**
+- **Frontend** : Angular avec les modules FormsModule, ReactiveFormsModule, ngx-toastr pour les notifications, et ngx-pagination pour la gestion des pages.
+- **Backend** : API REST simulée avec `HttpClient` pour les opérations CRUD.
+- **Styling** : CSS pour la mise en page et la gestion de l'interface utilisateur.
 
-## Code scaffolding
+## **Structure du projet**
+- **Components** : 
+  - `UserComponent` : Gestion de l'interface utilisateur pour l'affichage, le filtrage, l'ajout, la modification, et la suppression des utilisateurs.
+- **Services** : 
+  - `UserService` : Service Angular pour les opérations CRUD avec le backend simulé via `HttpClient`.
+- **Models** :
+  - `User` : Interface TypeScript représentant un utilisateur.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## **Installation**
+1. **Cloner le dépôt** :
+   ```bash
+   git clone https://github.com/SOULEYMANEHAMANEADJI/user-mgt-01.git
+   ```
+2. **Installer les dépendances** :
+   ```bash
+   cd user-management-app
+   npm install
+   ```
+3. **Démarrer le serveur** :
+   ```bash
+   ng serve
+   ```
+   L'application sera accessible via `http://localhost:4200`.
 
-## Build
+4. **Backend Simulé** :
+   - Utilisez un serveur JSON local comme `json-server` pour simuler l'API REST.
+   - Lancer `json-server` :
+     ```bash
+     json-server --watch db.json --port 3000
+     ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## **Utilisation**
+1. **Naviguer à l'URL** `http://localhost:4200` pour accéder à l'application.
+2. **Gérer les utilisateurs** en utilisant les fonctionnalités d'ajout, modification, et suppression.
+3. **Utiliser les filtres** pour rechercher des utilisateurs spécifiques.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## **Remarques**
+- **Gestion des doublons** : L'application empêche l'ajout d'un utilisateur avec un nom déjà existant.
+- **Gestion des erreurs** : Notifications d'erreur pour toute opération qui échoue.
