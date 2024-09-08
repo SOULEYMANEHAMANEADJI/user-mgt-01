@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "c2b4",
+      "identifier": "0066x5za3",
+      "name": "BAS",
+      "department": "IT",
+      "salary": 10000,
+      "gender": "male",
+      "status": null
+    },
+    {
+      "id": "c2b4",
+      "identifier": "1274h451d",
+      "name": "monitor",
+      "department": "AI",
+      "salary": 3000,
+      "gender": "male",
+      "status": true
+    }
+  ]
+}
