@@ -1,7 +1,9 @@
+---
+
 # **User Management Application 01**
 
 ## **Description**
-Cette application Angular permet de gérer les utilisateurs au sein d'une organisation. Elle permet d'ajouter, modifier, supprimer, et filtrer les utilisateurs selon différents critères (nom, département, genre, etc.). Les fonctionnalités incluent la pagination, la gestion des doublons, et l'affichage dynamique des utilisateurs en fonction de leurs salaires et statuts.
+Cette application Angular permet de gérer les utilisateurs au sein d'une organisation. Elle offre des fonctionnalités pour ajouter, modifier, supprimer, et filtrer les utilisateurs selon différents critères (nom, département, genre, etc.). Les fonctionnalités incluent la pagination, la gestion des doublons, et l'affichage dynamique des utilisateurs en fonction de leurs salaires et statuts.
 
 ## **Fonctionnalités principales**
 - **Affichage des utilisateurs** : Liste paginée des utilisateurs avec la possibilité de filtrer par nom, département, salaire, genre, et statut.
@@ -11,9 +13,10 @@ Cette application Angular permet de gérer les utilisateurs au sein d'une organi
 - **Calculs dynamiques** :
   - **Total des salaires** des utilisateurs actifs.
   - **Nombre total d'utilisateurs**.
+- **Gestion des signaux** : Utilisation des observables (RxJS) pour réagir dynamiquement aux changements de données et optimiser les opérations asynchrones.
 
 ## **Technologies utilisées**
-- **Frontend** : Angular avec les modules FormsModule, ReactiveFormsModule, ngx-toastr pour les notifications, et ngx-pagination pour la gestion des pages.
+- **Frontend** : Angular avec les modules FormsModule, ReactiveFormsModule, ngx-toastr pour les notifications, ngx-pagination pour la gestion des pages, et RxJS pour la gestion des signaux.
 - **Backend** : API REST simulée avec `HttpClient` pour les opérations CRUD.
 - **Styling** : CSS pour la mise en page et la gestion de l'interface utilisateur.
 
@@ -56,3 +59,7 @@ Cette application Angular permet de gérer les utilisateurs au sein d'une organi
 ## **Remarques**
 - **Gestion des doublons** : L'application empêche l'ajout d'un utilisateur avec un nom déjà existant.
 - **Gestion des erreurs** : Notifications d'erreur pour toute opération qui échoue.
+- **Gestion des signaux** : Les observables (signaux) sont utilisés pour réagir aux changements en temps réel, permettant ainsi une meilleure réactivité et optimisation de l'application.
+
+### Auteur : MineHAS
+---
